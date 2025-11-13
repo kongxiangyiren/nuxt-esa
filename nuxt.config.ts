@@ -1,5 +1,5 @@
-import { existsSync, readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   nitro: {
     // npm run build -- --preset=./preset
     // preset:"./preset"
-
+    // 静态文件内联（不建议生产模式开启，仅用于 dev 测试）
+    // serveStatic: 'inline',
     experimental: {
       // 开启openapi
       openAPI: true
@@ -26,7 +27,7 @@ export default defineNuxtConfig({
         }
       }
     },
-        hooks: {
+    hooks: {
       'build:before'(nitro) {
         // openapi 修改
         if (nitro.options.experimental?.openAPI) {

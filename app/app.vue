@@ -9,6 +9,7 @@
           <NuxtLink to="/upload" class="nav-item" :class="{ active: isActive('/upload') }">
             上传
           </NuxtLink>
+          <NuxtLink to="/ip" class="nav-item" :class="{ active: isActive('/ip') }">IP查询</NuxtLink>
 
           <NuxtLink to="/about" class="nav-item" :class="{ active: isActive('/about') }">
             关于
