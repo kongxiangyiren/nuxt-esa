@@ -85,7 +85,7 @@ export default defineEventHandler(async event => {
   const list = address.split('|');
 
   return {
-    ip: event.headers.get('x-forwarded-for'),
+    ip: event.headers.get('x-forwarded-for')?.split(',')[0],
     asn: list[8],
     // countryName: list[4],
     countryCodeAlpha2: list[4],
